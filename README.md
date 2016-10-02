@@ -1,24 +1,16 @@
-# README
+# Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Whenever you receive a new rails project there are a few steps you probably want to perform.  Can you think what those might be?
 
-Things you may want to cover:
+```sh
+bundle install
+rake db:setup #or rake db:create db:schema:load
+```
+> commit these to memory!
 
-* Ruby version
 
-* System dependencies
+This exercise is broken into several pieces on different branches.  You'll be asked to create various migrations for each exercise and you'll be given tests to help you verify your work.
 
-* Configuration
+After you complete an exercise, you'll commit and then change branches.  *(your changes on branch A won't show up on branch B)*
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
