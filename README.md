@@ -71,7 +71,7 @@ quantity - float
 brand - string
 ```
 
-Once you're done run the spec file: `bundle exec rspec spec/models/ingredients_spec.rb`
+Once you're done run the spec file: `bundle exec rspec spec/models/ingredient_spec.rb`
 
 Hopefully you see something like:
 
@@ -101,7 +101,7 @@ If the tests pass, you're done.  Move onto the next exercise.
 ### Exercise 2: Add authors table
 
 * branch: `2_authors_table`
-* spec: authors_spec.rb
+* spec: author_spec.rb
 
 Now I'd like you to add a new table to store authors in.  It should have the following columns:
 
@@ -115,7 +115,6 @@ email - string
 bio - text
 ```
 
-Run the test file `spec/models/authors_spec.rb`
 
 #### Exercise 2b: no address
 
@@ -125,8 +124,6 @@ Run the test file `spec/models/authors_spec.rb`
 Sorry, I changed my mind.  We don't really need the author's address.  Email is enough.
 
 Please write a migration to remove it.
-
-You can test your change with `spec/models/author_2b_no_address_spec.rb`
 
 
 #### Exercise 2c: oops!
@@ -138,8 +135,6 @@ You can test your change with `spec/models/author_2b_no_address_spec.rb`
 Oops, we shouldn't track age like that!  Age is a value we can calculate if we have the birthdate.  Let's track birthdate's instead.  
 
 We'll do this in two steps (2c and 2d).  First create a migration to remove the age field.  
-
-Test this with `spec/models/author_2c_no_age_spec.rb`
 
 > By the way!  If you were to run `spec/models/author_spec.rb` right now - how many errors would you see?  Why?
 
@@ -153,8 +148,6 @@ Now create another migration to add the new date.
 ```
 birthdate - date
 ```
-
-You can test this with `spec/models/authors_2d_birthdate_spec.rb`
 
 
 #### Exercise 3: Use only one migration
@@ -180,7 +173,7 @@ We want to split address up into its constituent parts.  But this time do the en
 * Add `state`, `zip`, `country` and `street_address2`.  
 * Change the type of `phone` from integer to string
 
-A good name for this migration might be `AddAddressDetailsToUsers`
+> A good name for this migration might be `AddAddressDetailsToUsers`
 
 #### Bonus Exercise 4: Add column constraints
 
@@ -192,4 +185,4 @@ This time we'll make a different change set to the users table.
 * Please make the name field REQUIRED (null: false)
 * Also add a boolean admin field with a default of false.
 
-You can do this in 1 migration, but since these are sort of different tasks 2 is also OK.
+You can do this in 1 migration, but since these are unrelated tasks, 2 is also OK.
