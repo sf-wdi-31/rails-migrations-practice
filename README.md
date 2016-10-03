@@ -4,11 +4,21 @@ In this exercise you will write migrations to add, remove and alter columns in t
 
 ### Skills needed
 
+Command line:
+
 * rake db:migrate
 * rake db:rollback
 * rails g migration AddXXXToYYY
 * rails g migration RemoveXXXToYYY
-* rails g migration 
+* rails g migration NNN
+
+Migrations:
+
+* `add_column :table, :column, :type, :options`
+* `remove_column :table, :column, :type, :options`
+* `change_column :table, :column, :new_type, :options`
+* `rename_column :table, :column, :new_name`
+
 
 # Setup
 
